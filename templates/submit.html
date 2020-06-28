@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The BANE! Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function empty() {
+            let data = document.getElementById("data").value;
+            if (data == "") {
+                alert("Ya can't hand in an empty form, y'know!");
+                return false;
+            };
+        }
+    </script>
+</head>
+<body>
+    <div style="padding: 50px">
+        <div style="text-align: center;">
+            <h1>
+                The BANE! Generator
+            </h1>
+        </div>
+        <br>
+        <form method="post">
+            <div class="alert alert-success">
+              Type something... BTW the green theme is for frog!
+            </div>
+            <textarea name="input" class="form-control" rows="5" id="data"></textarea>
+            <br>
+            <input type="submit" value="Generate" class="btn btn-outline-success" onClick="return empty()">
+        </form>
+        <br>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Generated Text</h5>
+                {{res}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
